@@ -9,14 +9,8 @@ pipeline{
             steps{
            // sh 'npm install -g firebase-tools'
                 echo 'Biulding...'
-                //
             }
         } 
-        stage('Checkout') {
-            steps {
-                git branch: 'main', credentialsId: 'CRISADRY', url: 'https://github.com/CRISADRY/Kelownatrails-master.git'
-            }
-        }
         stage('Testing Environment'){
             steps{
             sh 'firebase deploy -P testing-fc065 --token "$FIREBASE_DEPLOY_TOKEN"'
