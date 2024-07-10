@@ -4,7 +4,7 @@ pipeline{
     FIREBASE_DEPLOY_TOKEN = credentials('firebase-token')
     }
 
- stages{
+stages{
         stage('Building'){
             steps{
            // sh 'npm install -g firebase-tools'
